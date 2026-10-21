@@ -17,7 +17,23 @@ class MonospaceTextDisplay {
       this.data[y][colIndex] = "<span class=\"grass\">w</span>";
     }
   }
-  
+
+  drawTombstone(x, y, text) {
+    const width = text.length;
+    for (let i = 0; i < text.length; ++i) {
+      const colIndex = x + i;
+      this.data[y - 1][colIndex] = "-";
+      this.data[y][colIndex] = "<span class=\"tombstone\">" + text[i] + "</span>";
+      if (i == 0) {
+        this.data[y][colIndex] = "<a href=\"#\" class=\"tombstone\">" + this.data[y][colIndex];
+      } else if (i == text.length - 1) {
+        this.data[y][colIndex] += "</a>"
+      }
+    }
+
+  }
+
+
   render() {
     this.element.innerHTML = this.data.map((row) => row.join("")).join("\n");
   }
@@ -35,6 +51,8 @@ function main() {
   for (let i = 0; i < numGrass; ++i) {
     display.drawGrass(randomInt(width), randomInt(height), randomInt(3) + 2);
   }
+  const tombstoneText = "asdf"
+  display.drawTombstone(Math.floor(width / 2 - tombstoneText.length / 2), Math.floor(height / 2), tombstoneText)
   
   display.render();
 }

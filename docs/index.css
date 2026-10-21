@@ -16,6 +16,16 @@ body {
 .ground {
     color: #666;
 }
+
 .grass {
     color: #393;
+}
+
+.tombstone {
+    color: #fff !important;
+}
+
+
+.tombstone a {
+    color: #fff !important;
 }
