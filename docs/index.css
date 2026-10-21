@@ -1,0 +1,21 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.wrapper {
+    /* max-width: 960px; */
+    margin: 0px auto;
+}
+
+#graveyard {
+    white-space: preserve nowrap;
+    font-family: monospace;
+}
+
+.ground {
+    color: #666;
+}
+.grass {
+    color: #393;
+}
