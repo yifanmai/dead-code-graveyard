@@ -3,11 +3,6 @@ body {
     color: #fff;
 }
 
-.wrapper {
-    /* max-width: 960px; */
-    margin: 0px auto;
-}
-
 #graveyard {
     white-space: preserve nowrap;
     font-family: monospace;
