@@ -23,7 +23,6 @@ class MonospaceTextDisplay {
   }
 }
 
-
 function randomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -36,8 +35,6 @@ function main() {
   for (let i = 0; i < numGrass; ++i) {
     display.drawGrass(randomInt(width), randomInt(height), randomInt(3) + 2);
   }
-
-  // display.drawTombstone(100, 100, "tensorflow")
   
   display.render();
 }
